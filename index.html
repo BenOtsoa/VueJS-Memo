@@ -1,0 +1,44 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+    <link rel="stylesheet" href="./styles/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Memento</title>
+</head>
+
+<body>
+    <div class="container" id="app">
+        <div class="row">
+            <div class="mx-auto" id="Title">Memento</div>
+        </div>
+        <div class="row">
+            <div class="input-group input-group-lg">
+                <input type="text" v-on:keyup.13="submit" v-model:input='text' class="form-control" aria-label="Large"
+                    aria-describedby="inputGroup-sizing-sm">
+            </div>
+        </div>
+        <div class="row d-flex align-items-center flex-column">
+            <div class="btn_validation">
+                <button class="btn btn-success text" @click="submit"><i class="devicon-vuejs-plain-wordmark"></i></button>
+            </div>
+        </div>
+        <div class="row flex-row justify-content-center combo" v-if="memos.length !== 0" v-for="(memo,index) in memos"
+            :key="memo">
+            <div class="card col-8 item">
+                {{memo}}
+            </div>
+            <a href="#" @click="memos.splice(index,1)" class="card col-1 btn-cross">X
+            </a>
+        </div>
+
+    </div>
+    <script src="https://unpkg.com/vue@2.5.17/dist/vue.js"></script>
+    <script src="script.js"></script>
+    <script src="./script/bootstrap.min.js"></script>
+</body>
+
+</html>

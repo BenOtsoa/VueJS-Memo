@@ -1,0 +1,41 @@
+body {
+  background-color: rgb(225, 255, 236);
+}
+
+#title {
+  color: rgb(255, 131, 82);
+  font-size: 3rem;
+  padding: 2rem;
+}
+
+.btn_validation {
+  margin: 1rem 0rem;
+}
+
+.combo {
+  margin: 1rem;
+}
+.item {
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+}
+
+.btn-cross {
+  padding: 0.5rem 1rem;
+  color: black;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  background-color: rgb(145, 145, 145);
+  transition: 0.5s;
+}
+
+.btn-cross:hover {
+  color: black;
+  background-color: rgb(105, 105, 105);
+  text-decoration: none;
+}
+
+i {
+  font-size: 3rem;
+}
